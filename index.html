@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/9d9b446610.js" crossorigin="anonymous"></script>
+    <title>Protfolio</title>
+    <style>
+      body{
+        cursor: none;
+      }
+      .cursor-dot{
+        width: 5px;
+        height: 5px;
+        background-color: rgb(133, 132, 132); /* Neon color */
+      }
+      .cursor-outline{
+        width: 30px;
+        height: 30px;
+        border: 2px solid hsla(0, 0%, 100%, 0.5);
+      }
+      .cursor-dot,
+      .cursor-outline{
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        pointer-events: none;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      const cursorDot = document.querySelector('[data-cursor-dot]');
+      const cursorOutline = document.querySelector('[data-cursor-outline]');
+      
+      let posX = 0;
+      let posY = 0;
+      let outlinePosX = 0;
+      let outlinePosY = 0;
+      const speed = 0.1;
+
+      window.addEventListener('mousemove', function(e) {
+        posX = e.clientX;
+        posY = e.clientY;
+
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
+      });
+
+      function animateOutline() {
+        outlinePosX += (posX - outlinePosX) * speed;
+        outlinePosY += (posY - outlinePosY) * speed;
+
+        cursorOutline.style.left = `${outlinePosX}px`;
+        cursorOutline.style.top = `${outlinePosY}px`;
+
+        requestAnimationFrame(animateOutline);
+      }
+
+      animateOutline();
+    </script>
+  </body>
+</html>
