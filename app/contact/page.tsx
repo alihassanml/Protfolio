@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 /** ContactPage → the Person it belongs to. Ties the handle, title and
- * — every profile back to one identity for search engines. */
+ * every profile back to one identity for search engines. */
 const contactSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",

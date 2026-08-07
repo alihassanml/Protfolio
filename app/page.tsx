@@ -8,12 +8,12 @@ import { featured, projects } from "@/lib/projects";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Ali Hassan — AI Engineer & Data Scientist | alihassanml",
+  title: "Ali Hassan, AI Engineer & Data Scientist | alihassanml",
   description:
     "Ali Hassan (alihassanml) is an AI Engineer in Lahore, Pakistan, building agentic AI systems, voice agents, RAG pipelines and computer vision models.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Ali Hassan — AI Engineer & Data Scientist",
+    title: "Ali Hassan, AI Engineer & Data Scientist",
     description:
       "Agentic AI, voice agents, RAG and computer vision systems, built and shipped by Ali Hassan in Lahore, Pakistan.",
     url: site.url,

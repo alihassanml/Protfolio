@@ -14,19 +14,19 @@ export const metadata: Metadata = {
   description,
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "AI Engineering Services — Ali Hassan",
+    title: "AI Engineering Services | Ali Hassan",
     description,
     url: pageUrl,
     type: "website",
   },
 };
 
-/** Service graph — tells search engines what is on offer and who provides it. */
+/** Service graph: tells search engines what is on offer and who provides it. */
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": `${pageUrl}#service`,
-  name: "AI Engineering Services — Ali Hassan",
+  name: "AI Engineering Services | Ali Hassan",
   url: pageUrl,
   description,
   areaServed: "Worldwide",
@@ -83,14 +83,14 @@ const services = [
   {
     kicker: "Retrieval",
     title: "RAG & document intelligence",
-    body: "I make private corpora answerable — contracts, tickets, manuals, research — with retrieval that gets measured rather than assumed. Where the data cannot leave its environment, I build knowledge graphs and federated setups that query it in place.",
+    body: "I make private corpora answerable (contracts, tickets, manuals, research) with retrieval that gets measured rather than assumed. Where the data cannot leave its environment, I build knowledge graphs and federated setups that query it in place.",
     deliverables:
       "ingestion pipeline, vector or graph store, retrieval evaluation, answer API",
   },
   {
     kicker: "Computer vision",
     title: "Computer vision systems",
-    body: "I train detection and classification models on your own footage — YOLOv11 and custom architectures — and wrap them in pipelines that read live video without falling behind. That covers RTSP streams, edge devices and batch runs over recorded archives.",
+    body: "I train detection and classification models on your own footage, using YOLOv11 and custom architectures, and wrap them in pipelines that read live video without falling behind. That covers RTSP streams, edge devices and batch runs over recorded archives.",
     deliverables:
       "dataset labelling strategy, trained model weights, evaluation report, FastAPI inference service, deployment",
   },
@@ -104,7 +104,7 @@ const services = [
   {
     kicker: "Product engineering",
     title: "AI product engineering",
-    body: "The model is rarely the whole job — someone still has to log in, upload a file and read a result they trust. I build the application around the model, front to back, so you ship one thing instead of coordinating three contractors.",
+    body: "The model is rarely the whole job. Someone still has to log in, upload a file and read a result they trust. I build the application around the model, front to back, so you ship one thing instead of coordinating three contractors.",
     deliverables:
       "Next.js or React front end, FastAPI backend, PostgreSQL, auth, dashboards, hosting",
   },
@@ -137,7 +137,7 @@ const formats = [
   {
     tag: "Fixed scope",
     name: "Project",
-    body: "A defined build with an agreed scope, a fixed price and a delivery date — the right shape when you already know what needs to exist.",
+    body: "A defined build with an agreed scope, a fixed price and a delivery date. The right shape when you already know what needs to exist.",
   },
   {
     tag: "Ongoing",

@@ -74,7 +74,7 @@ export default function Page() {
         <Reveal className="mt-8 max-w-2xl">
           <p className="lede">
             These are the computer vision, language and agentic systems I have
-            built and left running — trained models, deployed services, and the
+            built and left running: trained models, deployed services, and the
             code behind both. All of it is public on GitHub as {site.handle},
             alongside the rest of the repositories.
           </p>

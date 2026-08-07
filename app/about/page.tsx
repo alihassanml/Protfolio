@@ -10,19 +10,19 @@ const description =
 
 export const metadata: Metadata = {
   title: {
-    absolute: "About Ali Hassan — AI Engineer & Data Scientist in Lahore",
+    absolute: "About Ali Hassan | AI Engineer & Data Scientist in Lahore",
   },
   description,
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Ali Hassan — AI Engineer & Data Scientist in Lahore",
+    title: "About Ali Hassan | AI Engineer & Data Scientist in Lahore",
     description,
     url: `${site.url}/about`,
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Ali Hassan — AI Engineer & Data Scientist",
+    title: "About Ali Hassan | AI Engineer & Data Scientist",
     description,
   },
 };
@@ -33,7 +33,7 @@ const profileSchema = {
   "@type": "ProfilePage",
   "@id": `${site.url}/about#profilepage`,
   url: `${site.url}/about`,
-  name: "About Ali Hassan — AI Engineer & Data Scientist",
+  name: "About Ali Hassan | AI Engineer & Data Scientist",
   description,
   inLanguage: "en",
   mainEntity: {
@@ -81,7 +81,7 @@ const profileSchema = {
   },
 };
 
-/** Meta rows beside the portrait — facts, not decoration. */
+/** Meta rows beside the portrait: facts, not decoration. */
 const facts: { term: string; detail: string; href?: string }[] = [
   { term: "Based in", detail: site.location },
   { term: "Handle", detail: site.handle, href: site.links.github },
@@ -91,22 +91,22 @@ const facts: { term: string; detail: string; href?: string }[] = [
 
 const principles = [
   {
-    kicker: "01 — Production",
+    kicker: "01 / Production",
     title: "It ships or it isn't finished.",
     body: "A model that only runs in a notebook hasn't been built yet. I take the work to the point where it has an endpoint, a container and traffic that isn't mine.",
   },
   {
-    kicker: "02 — Evidence",
+    kicker: "02 / Evidence",
     title: "Measure it, don't claim it.",
     body: "Tracked experiments, versioned data, a result you can reproduce from the repository. If a number can't be checked, it doesn't get said out loud.",
   },
   {
-    kicker: "03 — Data",
+    kicker: "03 / Data",
     title: "Keep the data where it belongs.",
     body: "Local models through Ollama, on-premise inference and federated setups exist for a reason. When the data can't leave, the model comes to it.",
   },
   {
-    kicker: "04 — Restraint",
+    kicker: "04 / Restraint",
     title: "The smallest model that works.",
     body: "The useful question is rarely which model is biggest. It's which one is small enough to run at the latency and cost the system actually has.",
   },
@@ -184,20 +184,20 @@ export default function AboutPage() {
               >
                 {site.handle}
               </a>{" "}
-              — 150 repositories, 298 stars. The work spans multi-agent
+              carries 150 repositories and 298 stars. The work spans multi-agent
               systems and voice agents built on LangGraph, Pydantic AI, MCP and
               local models through Ollama; retrieval-augmented generation,
               including federated and knowledge-graph RAG; computer vision, with
               YOLOv11 models for emotion, sign language, workplace safety and
               security; AI automation through n8n; and the MLOps that keeps any
-              of it honest — Docker, AWS, DVC, CI/CD, experiment tracking.
+              of it honest: Docker, AWS, DVC, CI/CD, experiment tracking.
             </p>
             <p className="lede mt-7">
               The most-starred piece is a YOLOv11 face emotion detector at 31
               stars, with smoking detection at 26, a self-driving steering model
               at 20 and 40-class sign language recognition at 12 behind it. I
-              write mostly Python — 72 of those repositories are Jupyter
-              notebooks, 33 are Python — plus TypeScript when an AI product
+              write mostly Python (72 of those repositories are Jupyter
+              notebooks, 33 are Python), plus TypeScript when an AI product
               needs a front end people will actually use. Client work runs
               through Upwork, and what I hand over is a running system.
             </p>

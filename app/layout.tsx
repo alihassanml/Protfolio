@@ -27,22 +27,22 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Ali Hassan — AI Engineer & Data Scientist | alihassanml",
-    template: "%s | Ali Hassan — AI Engineer",
+    default: "Ali Hassan, AI Engineer & Data Scientist | alihassanml",
+    template: "%s | Ali Hassan, AI Engineer",
   },
   description: site.summary,
   keywords,
   authors: [{ name: site.name, url: site.url }],
   creator: site.name,
   publisher: site.name,
-  applicationName: "Ali Hassan — AI Engineer",
+  applicationName: "Ali Hassan, AI Engineer",
   alternates: { canonical: "/" },
   category: "technology",
   openGraph: {
     type: "website",
     url: site.url,
-    siteName: "Ali Hassan — AI Engineer",
-    title: "Ali Hassan — AI Engineer & Data Scientist",
+    siteName: "Ali Hassan, AI Engineer",
+    title: "Ali Hassan, AI Engineer & Data Scientist",
     description: site.summary,
     locale: "en_US",
   },
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@alihassanml",
     creator: "@alihassanml",
-    title: "Ali Hassan — AI Engineer & Data Scientist",
+    title: "Ali Hassan, AI Engineer & Data Scientist",
     description: site.summary,
   },
   robots: {
@@ -72,7 +72,7 @@ export const viewport: Viewport = {
 };
 
 /** Person + WebSite graph. This is what search engines read to connect
- * — the name "Ali Hassan", the handle "alihassanml" and the job title. */
+ * the name "Ali Hassan", the handle "alihassanml" and the job title. */
 const personSchema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -80,7 +80,7 @@ const personSchema = {
       "@type": "Person",
       "@id": `${site.url}/#person`,
       name: "Ali Hassan",
-      alternateName: ["alihassanml", "Ali Hassan ML", "Ali Hassan AI Engineer"],
+      alternateName: ["alihassanml", "Ali Hassan ML", "Ali Hassan, AI Engineer"],
       url: site.url,
       image: `${site.url}/image.jpeg`,
       jobTitle: "AI Engineer",
@@ -142,7 +142,7 @@ const personSchema = {
       "@type": "WebSite",
       "@id": `${site.url}/#website`,
       url: site.url,
-      name: "Ali Hassan — AI Engineer",
+      name: "Ali Hassan, AI Engineer",
       description: site.summary,
       publisher: { "@id": `${site.url}/#person` },
       inLanguage: "en",

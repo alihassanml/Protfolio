@@ -9,7 +9,7 @@ import { site, stats } from "@/lib/site";
 
 gsap.registerPlugin(useGSAP);
 
-/** Corner brackets — the detection frame that reads the portrait as a subject. */
+/** Corner brackets: the detection frame that reads the portrait as a subject. */
 const corners = [
   "-left-2 -top-2 border-l-2 border-t-2 rounded-tl-lg",
   "-right-2 -top-2 border-r-2 border-t-2 rounded-tr-lg",
@@ -112,7 +112,7 @@ export default function Hero() {
           <div data-anim="intro" className="mt-10 max-w-xl">
             <p className="lede">
               I build agentic AI systems, voice agents, RAG pipelines and
-              computer vision models — trained, deployed and left running in
+              computer vision models. Trained, deployed and left running in
               production. 150 repositories of it, in the open.
             </p>
 

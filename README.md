@@ -1,4 +1,4 @@
-# Ali Hassan — AI Engineer
+# Ali Hassan AI Engineer
 
 Personal site for Ali Hassan (`alihassanml`), AI Engineer in Lahore, Pakistan.
 Next.js 16 App Router, React 19, TypeScript, Tailwind CSS v4, GSAP and Lenis.

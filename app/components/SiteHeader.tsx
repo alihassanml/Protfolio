@@ -34,7 +34,7 @@ export default function SiteHeader() {
       <div className="mx-auto flex h-20 max-w-[88rem] items-center justify-between px-6 lg:px-12">
         <Link
           href="/"
-          aria-label="Ali Hassan — AI Engineer, home"
+          aria-label="Ali Hassan, AI Engineer, home"
           className="font-display text-xl font-bold tracking-tight text-ink"
         >
           Ali Hassan
