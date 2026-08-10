@@ -38,6 +38,9 @@ export const metadata: Metadata = {
   applicationName: "Ali Hassan, AI Engineer",
   alternates: { canonical: "/" },
   category: "technology",
+  verification: {
+    google: "vQRJdUMkJO6VkfOc_Hpew0EeEWHKx2xFP1RtVYdPlmI",
+  },
   openGraph: {
     type: "website",
     url: site.url,
