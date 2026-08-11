@@ -1,14 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Bricolage_Grotesque, Instrument_Sans, JetBrains_Mono } from "next/font/google";
+import { Poppins, Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "./components/SmoothScroll";
 import SiteHeader from "./components/SiteHeader";
 import SiteFooter from "./components/SiteFooter";
 import { keywords, site } from "@/lib/site";
 
-const bricolage = Bricolage_Grotesque({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-bricolage",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
   display: "swap",
 });
 
@@ -157,7 +158,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${bricolage.variable} ${instrument.variable} ${jetbrains.variable}`}
+      className={`${poppins.variable} ${instrument.variable} ${jetbrains.variable}`}
     >
       <body className="bg-paper text-ink antialiased">
         <script

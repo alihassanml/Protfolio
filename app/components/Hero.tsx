@@ -9,17 +9,8 @@ import { site, stats } from "@/lib/site";
 
 gsap.registerPlugin(useGSAP);
 
-/** Corner brackets: the detection frame that reads the portrait as a subject. */
-const corners = [
-  "-left-2 -top-2 border-l-2 border-t-2 rounded-tl-lg",
-  "-right-2 -top-2 border-r-2 border-t-2 rounded-tr-lg",
-  "-left-2 -bottom-2 border-b-2 border-l-2 rounded-bl-lg",
-  "-right-2 -bottom-2 border-b-2 border-r-2 rounded-br-lg",
-];
-
 export default function Hero() {
   const root = useRef<HTMLElement>(null);
-  const confidence = useRef<HTMLSpanElement>(null);
 
   useGSAP(
     () => {
@@ -45,12 +36,6 @@ export default function Hero() {
           0.55,
         )
         .from(
-          "[data-anim='corner']",
-          { scale: 0.2, opacity: 0, duration: 0.7, stagger: 0.06 },
-          1.05,
-        )
-        .from("[data-anim='chip']", { y: 12, opacity: 0, duration: 0.8 }, 1.15)
-        .from(
           "[data-anim='intro'] > *",
           { y: 20, opacity: 0, duration: 1, stagger: 0.09 },
           0.7,
@@ -60,23 +45,6 @@ export default function Hero() {
           { y: 18, opacity: 0, duration: 0.9, stagger: 0.07 },
           1.05,
         );
-
-      // Confidence readout settles the way an inference score does.
-      const score = { value: 0 };
-      tl.to(
-        score,
-        {
-          value: 0.99,
-          duration: 1.1,
-          ease: "power2.out",
-          onUpdate: () => {
-            if (confidence.current) {
-              confidence.current.textContent = score.value.toFixed(2);
-            }
-          },
-        },
-        1.2,
-      );
     },
     { scope: root },
   );
@@ -133,51 +101,27 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Detection frame */}
+        {/* Portrait */}
         <div className="lg:col-span-5">
           <div className="mx-auto w-full max-w-[26rem] lg:ml-auto lg:mr-0 lg:max-w-[34rem]">
-            <div className="relative">
-              <div
-                data-anim="frame"
-                className="relative aspect-square overflow-hidden rounded-xl bg-oat"
-              >
-                <Image
-                  src="/image.jpeg"
-                  alt="Ali Hassan, AI Engineer and Data Scientist based in Lahore, Pakistan"
-                  width={1040}
-                  height={1092}
-                  priority
-                  sizes="(max-width: 1024px) 92vw, 34rem"
-                  className="h-full w-full object-cover object-[58%_20%]"
-                />
-                <span
-                  data-anim="scan"
-                  aria-hidden
-                  className="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-pine/70 opacity-0"
-                />
-              </div>
-
-              {corners.map((cls) => (
-                <span
-                  key={cls}
-                  data-anim="corner"
-                  aria-hidden
-                  className={`pointer-events-none absolute h-12 w-12 border-pine ${cls}`}
-                />
-              ))}
-            </div>
-
             <div
-              data-anim="chip"
-              className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[0.7rem] tracking-tight text-ink-soft"
+              data-anim="frame"
+              className="relative aspect-square overflow-hidden rounded-xl bg-oat"
             >
-              <span className="rounded-md bg-pine-wash px-2.5 py-1 text-pine">
-                ali_hassan
-              </span>
-              <span>ai_engineer</span>
-              <span className="text-ink-mute">
-                conf <span ref={confidence}>0.99</span>
-              </span>
+              <Image
+                src="/image.jpeg"
+                alt="Ali Hassan, AI Engineer and Data Scientist based in Lahore, Pakistan"
+                width={1040}
+                height={1092}
+                priority
+                sizes="(max-width: 1024px) 92vw, 34rem"
+                className="h-full w-full object-cover object-[58%_20%]"
+              />
+              <span
+                data-anim="scan"
+                aria-hidden
+                className="pointer-events-none absolute inset-x-0 top-0 h-[2px] bg-pine/70 opacity-0"
+              />
             </div>
           </div>
         </div>

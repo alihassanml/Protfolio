@@ -22,7 +22,7 @@
   --color-pine-wash: #e6ece7;
 
   /* Type */
-  --font-display: var(--font-bricolage), "Helvetica Neue", sans-serif;
+  --font-display: var(--font-poppins), "Helvetica Neue", sans-serif;
   --font-sans: var(--font-instrument), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 
@@ -55,11 +55,13 @@
     border-radius: 2px;
   }
 
+  /* Poppins is geometric with round, open bowls  it needs looser tracking
+     and a little more leading than a condensed grotesque would. */
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-weight: 700;
-    letter-spacing: -0.035em;
-    line-height: 0.95;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
     text-wrap: balance;
   }
 
@@ -83,9 +85,9 @@
 
   /* Display sizes */
   .d-hero {
-    font-size: clamp(2.9rem, 7.6vw, 7.25rem);
-    line-height: 0.9;
-    letter-spacing: -0.04em;
+    font-size: clamp(2.75rem, 7.1vw, 6.75rem);
+    line-height: 1;
+    letter-spacing: -0.025em;
   }
   .d-1 { font-size: clamp(2.35rem, 5vw, 4.25rem); }
   .d-2 { font-size: clamp(1.85rem, 3.6vw, 3rem); }
